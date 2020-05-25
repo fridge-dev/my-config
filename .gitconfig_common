@@ -1,0 +1,51 @@
+[core]
+  editor = vim
+  pager = less -FMRiX
+  excludesfile = ~/.gitignore_global
+  whitespace = cr-at-eol
+
+[push]
+  default = simple
+
+[pull]
+  rebase = true
+
+[color]
+  ui = true
+
+[alias]
+  st = !(git status && git stash list)
+  showf = show --name-status # diff-tree --no-commit-id --name-only -r
+  showfr = diff --name-only
+  showstash = stash show -p stash@{0}
+
+  lg  = log --graph --branches --pretty=format:'%C(yellow)%h%C(auto)%d%Creset %s %C(blue)(%cr) %C(bold blue)<%an>'
+  lg2 = log --graph            --pretty=format:'%C(yellow)%h%C(auto)%d%Creset %s %C(blue)(%cr) %C(bold blue)<%an>'
+  lg3 = log --graph --branches --pretty=format:'%C(yellow)%h%C(bold green)%d%Creset %s %C(blue)(%cr) %C(bold blue)<%an>'
+  lg4 = log --graph --branches --oneline --decorate
+  dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+
+  pr = pull --rebase
+  pr-force = !(git stash save -u "Stashing for 'pull --rebase'" && git pull --rebase && git stash pop)
+
+  ap = add -p
+  amend = commit --amend
+
+  br = branch
+  ff = merge --ff
+
+  previous-branch = !(git branch --contains HEAD~1 | sed -n 1p)
+  current-branch = !(git branch | grep '*')
+  current-branch2 = rev-parse --abbrev-ref HEAD # TODO compare with above, which is better? #airplaneMode
+  current-hash = rev-parse --short HEAD
+  current-commit-msg = !(git log -1 --pretty=%B | head -1)
+
+  preview = diff --cached
+  quickstash = !(git checkout -b tmp && git add . && git commit -m "STASH" && git checkout $(git previous-branch))
+  rewind = reset --soft HEAD~1
+  unstage = reset HEAD
+  unstage-all = !git reset HEAD .
+
+  cp = cherry-pick
+  ours = !(git checkout --ours -- . && git add .)
+  theirs = !(git checkout --theirs -- . && git add .)

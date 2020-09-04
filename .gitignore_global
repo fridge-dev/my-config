@@ -10,3 +10,6 @@ build
 .idea
 .cache
 Cargo.lock
+target
+pkg
+annotation-generated-*

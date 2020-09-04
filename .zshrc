@@ -1,3 +1,7 @@
+# -- navigation
+alias k='cd ~/k'
+alias ws='cd ~/k/workspace'
+
 # -- services
 alias psg='ps -ef | grep -v grep | grep ' # grep for a process, and exclude the "grep" process itself from results
 alias ps-java='psg java'

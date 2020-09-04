@@ -8,5 +8,8 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:/usr/local/go/bin
 
+# brew install protobuf@3.6
+export PATH=$PATH:/usr/local/opt/protobuf@3.6/bin
+
 export GOPATH="$HOME/go"
 

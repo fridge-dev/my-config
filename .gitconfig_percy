@@ -1,3 +1,4 @@
 [user]
   name = Alec Von Arx
-  email = TODO-private@private.com
+  # DON'T COMMIT THIS CHANGE - privacy
+  email = al.vonarx+fridge-dev@gmail.com

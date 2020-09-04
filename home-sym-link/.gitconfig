@@ -3,4 +3,4 @@
 [includeIf "gitdir:~/k/workspace/fridge-dev/"]
   path = ~/k/workspace/fridge-dev/my-config/.gitconfig_percy
 [includeIf "gitdir:~/k/workspace/amazon/"]
-  path = ~/k/workspace/amazon/gitconfig
+  path = ~/k/workspace/amazon/no-team/alecva-config/src/AlecvaConfig/laptop/.gitconfig

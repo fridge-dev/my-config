@@ -22,7 +22,7 @@ alias dir-sizes='sudo find . -maxdepth 1 -type d -exec du -sh {} +'
 
 # -- grep
 alias find-file='find -f . | grep '
-alias ss='grep --color -nr --exclude-dir=log --exclude-dir=tmp --exclude-dir=build --exclude-dir=eclipse-bin --exclude-dir=.git --exclude-dir=target'
+alias ss='grep --color -nr --exclude-dir=log --exclude-dir=tmp --exclude-dir=build --exclude-dir=eclipse-bin --exclude-dir=.git --exclude-dir=target --exclude-dir=node_modules'
 s() {
   ss "$1" .
 }
@@ -48,4 +48,10 @@ update-wallpaper() {
   echo
 }
 update-wallpaper &>/dev/null &
+
+# -- ruby/jekyll
+# https://jekyllrb.com/docs/installation/macos/
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/auto.sh
+#chruby ruby-3.1.1
 

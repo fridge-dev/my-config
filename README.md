@@ -21,6 +21,8 @@ git clone https://github.com/fridge-dev/my-config
 
 ## `git` dotfiles
 
+TODO: replace with sym link
+
 ```
 # .gitconfig
 echo "[include]" >> ~/.gitconfig
@@ -34,6 +36,8 @@ ln -s ~/k/workspace/fridge-dev/my-config/.gitignore_global ~/.gitignore_global
 
 ## `zsh` dotfiles
 
+TODO: repalce with sym link
+
 ```
 echo "# Percy" >> ~/.zshrc
 echo "source $HOME/k/workspace/fridge-dev/my-config/.zshrc" >> ~/.zshrc
@@ -43,3 +47,15 @@ echo "# Percy" >> ~/.zshenv
 echo "source $HOME/k/workspace/fridge-dev/my-config/.zshenv" >> ~/.zshenv
 echo "" >> ~/.zshenv
 ```
+
+TODO: add .zprofile
+
+## Set up steps (unordered)
+
+1. OSX settings
+1. Terminal color settings
+1. Install homebrew
+1. Install hammerspoon + shiftit
+1. git? (already installed)
+1. CLion + IntelliJ + Sublime
+

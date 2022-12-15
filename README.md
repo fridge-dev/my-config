@@ -19,36 +19,15 @@ mkdir fridge-dev && cd $_
 git clone https://github.com/fridge-dev/my-config
 ```
 
-## `git` dotfiles
-
-TODO: replace with sym link
+## Set up dotfiles
 
 ```
-# .gitconfig
-echo "[include]" >> ~/.gitconfig
-echo "  path = ~/k/workspace/fridge-dev/my-config/.gitconfig_common" >> ~/.gitconfig
-echo "[includeIf \"gitdir:~/k/workspace/fridge-dev/\"]" >> ~/.gitconfig
-echo "  path = ~/k/workspace/fridge-dev/my-config/.gitconfig_percy" >> ~/.gitconfig
+cd ~/k/workspace/fridge-dev/my-config/home-sym-link
+ln -s $(pwd)/.* ~/
 
-# .gitignore
-ln -s ~/k/workspace/fridge-dev/my-config/.gitignore_global ~/.gitignore_global
+# confirm
+la ~
 ```
-
-## `zsh` dotfiles
-
-TODO: repalce with sym link
-
-```
-echo "# Percy" >> ~/.zshrc
-echo "source $HOME/k/workspace/fridge-dev/my-config/.zshrc" >> ~/.zshrc
-echo "" >> ~/.zshrc
-
-echo "# Percy" >> ~/.zshenv
-echo "source $HOME/k/workspace/fridge-dev/my-config/.zshenv" >> ~/.zshenv
-echo "" >> ~/.zshenv
-```
-
-TODO: add .zprofile
 
 ## Set up steps (unordered)
 
@@ -58,4 +37,4 @@ TODO: add .zprofile
 1. Install hammerspoon + shiftit
 1. git? (already installed)
 1. CLion + IntelliJ + Sublime
-
+1. 

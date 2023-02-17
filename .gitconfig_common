@@ -16,6 +16,9 @@
 [credential]
   helper = osxkeychain
 
+[advice]
+  skippedCherryPicks = false
+
 [alias]
   st = !(git status && git stash list)
   showf = show --name-status # diff-tree --no-commit-id --name-only -r

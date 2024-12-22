@@ -1,6 +1,8 @@
 # -- navigation
 alias k='cd ~/k'
 alias ws='cd ~/k/workspace'
+alias fr='cd ~/k/workspace/fridge-dev'
+alias blog='cd ~/k/workspace/fridge-dev/blog && subl .'
 
 # -- services
 alias psg='ps -ef | grep -v grep | grep ' # grep for a process, and exclude the "grep" process itself from results
@@ -47,7 +49,6 @@ update-wallpaper() {
   echo "Success." && \
   echo
 }
-update-wallpaper &>/dev/null &
 
 # -- ruby/jekyll
 # https://jekyllrb.com/docs/installation/macos/

@@ -11,6 +11,11 @@ export PATH=$PATH:/usr/local/go/bin
 # brew install protobuf@3
 export PATH=$PATH:/opt/homebrew/opt/protobuf@3/bin
 
+# brew install pyenv
+# pyenv install 3.12.2
+# TODO find better way to not hardcode version
+export PATH=$PATH:$HOME/.pyenv/versions/3.12.2/bin
+
 export GOPATH="$HOME/go"
 
 # From `brew install nvm`

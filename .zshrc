@@ -32,7 +32,7 @@ s() {
 # -- sublime
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
-# -- wallpaper
+# -- wallpaper (deprecated)
 # Update OSX wallpaper from today's image from http://miniature-calendar.com
 update-wallpaper() {
   TIMESTAMP=$(date "$@" +%s)

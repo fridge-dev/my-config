@@ -33,9 +33,10 @@ la ~
 ## Set up steps (unordered)
 
 1. OSX settings
+1. git? (already installed)
+1. This repo
 1. cmux
 1. Install homebrew
 1. Install hammerspoon + shiftit
-1. git? (already installed)
-1. CLion + IntelliJ + Sublime
 1. claude
+1. CLion + IntelliJ + Sublime

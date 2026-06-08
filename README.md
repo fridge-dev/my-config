@@ -22,8 +22,9 @@ git clone https://github.com/fridge-dev/my-config
 ## Set up dotfiles
 
 ```
-cd ~/k/workspace/fridge-dev/my-config/home-sym-link
-ln -s $(pwd)/.* ~/
+cd ~/k/workspace/fridge-dev/my-config
+ln -s $(pwd)/home-sym-link/.* ~/
+ln -s $(pwd)/cmux ~/.config/cmux
 
 # confirm
 la ~
@@ -32,9 +33,9 @@ la ~
 ## Set up steps (unordered)
 
 1. OSX settings
-1. Terminal color settings
+1. cmux
 1. Install homebrew
 1. Install hammerspoon + shiftit
 1. git? (already installed)
 1. CLion + IntelliJ + Sublime
-1. 
+1. claude

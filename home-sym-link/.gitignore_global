@@ -13,3 +13,5 @@ Cargo.lock
 target
 pkg
 annotation-generated-*
+.agents
+.gpu-multiagent

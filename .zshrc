@@ -2,6 +2,7 @@
 alias k='cd ~/k'
 alias ws='cd ~/k/workspace'
 alias fr='cd ~/k/workspace/fridge-dev'
+alias my-config='cd ~/k/workspace/fridge-dev/my-config'
 alias blog='cd ~/k/workspace/fridge-dev/blog && subl .'
 
 # -- services
@@ -31,24 +32,6 @@ s() {
 
 # -- sublime
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-
-# -- wallpaper (deprecated)
-# Update OSX wallpaper from today's image from http://miniature-calendar.com
-update-wallpaper() {
-  TIMESTAMP=$(date "$@" +%s)
-  REMOTE_FOLDER=$(date -r $TIMESTAMP +%Y/%m)
-  FILENAME=$(date -r $TIMESTAMP +%y%m%d%a | awk '{print tolower($0)}').jpg
-  LOCAL_FILE=/tmp/$FILENAME
-  URL=http://miniature-calendar.com/wp-content/uploads/$REMOTE_FOLDER/$FILENAME
-
-  echo && \
-  echo "Downloading $URL" && \
-  curl --progress-bar -o $LOCAL_FILE $URL/$REMOTE_FOLDER/$FILENAME > /dev/null && \
-  osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$LOCAL_FILE\"" && \
-  echo && \
-  echo "Success." && \
-  echo
-}
 
 # -- ruby/jekyll
 # https://jekyllrb.com/docs/installation/macos/

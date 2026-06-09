@@ -4,6 +4,7 @@
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/go/bin
 #export PATH=$PATH:/usr/local/go/bin
@@ -23,12 +24,17 @@ export PATH="$PATH:/opt/homebrew/opt/go@1.21/bin"
 # From `brew install nvm`
 # Commenting this out since it's taking a lot of startup time
 export NVM_DIR="$HOME/.nvm"
-#[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-#[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm as well?? (copied from other zshrc)
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Hardcoded node version on PATH (hacky) instead of sourcing nvm, to avoid nvm's slow startup overhead on every shell init.
 # Update this path when changing default node version via `nvm install <version>`.
+
 export PATH="$HOME/.nvm/versions/node/v24.14.1/bin:$PATH"
 
-# From rustup?
+# From rustup
 . "$HOME/.cargo/env"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Prevent delta diff tool from opening a pager in kiro
+export DELTA_PAGER=cat

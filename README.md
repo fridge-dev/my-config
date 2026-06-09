@@ -30,7 +30,7 @@ ln -s $(pwd)/cmux ~/.config/cmux
 la ~
 ```
 
-## Set up steps (unordered)
+## Set up steps (roughly ordered)
 
 1. OSX settings
 1. git? (already installed)
@@ -39,4 +39,22 @@ la ~
 1. Install homebrew
 1. Install hammerspoon + shiftit
 1. claude
-1. CLion + IntelliJ + Sublime
+1. Sublime
+1. CLion + IntelliJ
+
+## Homebrew
+
+```
+brew install git-delta
+brew install gh
+```
+
+## Github
+
+```
+gh auth login
+# ? Where do you use GitHub? GitHub.com
+# ? What is your preferred protocol for Git operations on this host? HTTPS
+# ? Authenticate Git with your GitHub credentials? Yes
+# ? How would you like to authenticate GitHub CLI? Login with a web browser
+```

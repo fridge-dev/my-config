@@ -1,6 +1,6 @@
 [include]
-  path = ~/k/workspace/fridge-dev/my-config/.gitconfig_common
+  path = ~/k/workspace/fridge-dev/my-config/referenced/.gitconfig_common
 [includeIf "gitdir:~/k/workspace/fridge-dev/"]
-  path = ~/k/workspace/fridge-dev/my-config/.gitconfig_percy
+  path = ~/k/workspace/fridge-dev/my-config/referenced/.gitconfig_percy
 [includeIf "gitdir:~/k/workspace/amazon/"]
   path = ~/k/workspace/amazon/no-team/alecva-config/src/AlecvaConfig/laptop/.gitconfig

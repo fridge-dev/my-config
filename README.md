@@ -53,7 +53,7 @@ ln -s $(pwd)/cmux ~/.config/cmux
 To regenerate the Brewfile from current installations:
 
 ```
-brew bundle dump --file=~/k/workspace/fridge-dev/my-config/Brewfile --force
+brew bundle dump --file=~/k/workspace/fridge-dev/my-config/homebrew/Brewfile --force
 ```
 
 To install everything on a new laptop:

@@ -50,9 +50,16 @@ ln -s $(pwd)/cmux ~/.config/cmux
 
 ## Homebrew
 
+To regenerate the Brewfile from current installations:
+
 ```
-brew install git-delta
-brew install gh
+brew bundle dump --file=~/k/workspace/fridge-dev/my-config/Brewfile --force
+```
+
+To install everything on a new laptop:
+
+```
+brew bundle install --file=~/k/workspace/fridge-dev/my-config/homebrew/Brewfile
 ```
 
 ## Github

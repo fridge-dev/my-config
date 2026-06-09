@@ -1,11 +1,11 @@
 # my-config
 
-This repo contains configuration and dot-files for my personal use. It assumes the following directory structure for separation of personal development (github) and my corporate job.
+This repo contains configuration and dot-files for my personal use. It assumes the following directory structure for separation of personal development (github) and my salary job.
 
 * `~/k` - my main directory; intentionally namespaced from `~` (and not using OS-specific "Documents" dir) so I know which files are created by me and I can avoid when other software mis-uses/pollutes other directories.
 * `~/k/workspace` - where all of my software development happens
 * `~/k/workspace/fridge-dev` - contains repos from my personal github account (this one)
-* `~/k/workspace/{job}` - contains repos from my corporate job
+* `~/k/workspace/{job}` - contains repos from my job
 
 # New computer set up
 
@@ -24,10 +24,16 @@ git clone https://github.com/fridge-dev/my-config
 ```
 cd ~/k/workspace/fridge-dev/my-config
 ln -s $(pwd)/home-sym-link/.* ~/
-ln -s $(pwd)/cmux ~/.config/cmux
 
 # confirm
 la ~
+```
+
+## cmux
+
+```
+mv ~/.config/cmux/* $(pwd)/cmux/
+ln -s $(pwd)/cmux ~/.config/cmux
 ```
 
 ## Set up steps (roughly ordered)
